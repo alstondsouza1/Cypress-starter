@@ -23,7 +23,11 @@ const BookingForm = ({ rentals, updateBookings }) => {
       <form onSubmit={handleSubmit} data-cy="booking-form">
         <label>
           Rental:
-          <select name="rental" onChange={handleChange} value={formData.rental}>
+          <select data-cy="input-rental" 
+          name="rental" 
+          onChange={handleChange} 
+          value={formData.rental}
+          >
             {rentals.map(r => (
               <option value={r}>{r}</option>
             ))}
@@ -33,6 +37,7 @@ const BookingForm = ({ rentals, updateBookings }) => {
         <label>
           Date:
           <input
+            data-cy="input-date"
             name="date"
             type="date"
             required
@@ -44,6 +49,7 @@ const BookingForm = ({ rentals, updateBookings }) => {
         <label>
           Number of Guests:
           <input
+            data-cy="input-guests"
             name="guests"
             type="number"
             min="1"

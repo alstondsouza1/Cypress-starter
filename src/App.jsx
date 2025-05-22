@@ -84,12 +84,18 @@ function App() {
           style={{ marginTop: 32, marginBottom: 32 }}
         >
           <Grid item>
-            <Button variant="contained" onClick={handleToggleBookingForm}>
+            <Button data-cy="add-booking-btn" 
+            variant="contained" 
+            onClick={handleToggleBookingForm}
+            >
               Add Booking
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="contained" onClick={handleToggleBooking}>
+            <Button data-cy="booking-btn" 
+            variant="contained" 
+            onClick={handleToggleBooking}
+            >
               Bookings
             </Button>
           </Grid>
